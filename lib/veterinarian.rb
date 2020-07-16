@@ -28,4 +28,14 @@ class  Veterinarian
     # pets.reverse
   end
 
+  def total_customer_pets(customer)
+    customer.pets.count
+  end
+
+  def total_customers_pets
+      @customers.map do |customer|
+        customer.pets.count
+      end.sum
+  end
+
 end

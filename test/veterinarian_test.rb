@@ -74,7 +74,7 @@ class VeterinarianTest < MiniTest::Test
     assert_equal [molly, lucy, samson], vet.list_all_pets
   end
 
-  def test_vet_can_each_customers_pets
+  def test_vet_can_count_each_customers_pets
     # skip
     vet = Veterinarian.new("Mary")
 
@@ -92,7 +92,29 @@ class VeterinarianTest < MiniTest::Test
     vet.add_customer(joel)
     vet.add_customer(billy)
 
-    assert_equal [samson, lucy], vet.customer_pets(joel)
+    assert_equal 2, vet.total_customer_pets(joel)
+
+  end
+
+  def test_vet_can_count_all_customer_pets
+    # skip
+    vet = Veterinarian.new("Mary")
+
+    joel = Customer.new("Joel", 2)
+    billy = Customer.new("Billy", 3)
+
+    samson = Pet.new({name: "Samson", type: :dog, age: 3})
+    lucy = Pet.new({name: "Lucy", type: :cat, age: 4})
+    joel.adopt(samson)
+    joel.adopt(lucy)
+    
+    molly = Pet.new({name: "Molly", type: :cat, age: 7})
+    billy.adopt(molly)
+
+    vet.add_customer(joel)
+    vet.add_customer(billy)
+
+    assert_equal 3, vet.total_customers_pets
 
   end
 end
