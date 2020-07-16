@@ -11,16 +11,22 @@ class GroomerTest < Minitest::Test
   end
 
   def test_it_has_a_name
+    # skip
+
     groomer = Groomer.new("The Hair Ball")
     assert_equal "The Hair Ball", groomer.name
   end
 
   def test_it_starts_with_no_customers
+    # skip
+
     groomer = Groomer.new("The Hair Ball")
     assert_equal [], groomer.customers
   end
 
   def test_it_can_add_customers
+    # skip
+
     groomer = Groomer.new("The Hair Ball")
     joel = Customer.new("Joel", 2)
     billy = Customer.new("Billy", 3)
@@ -30,6 +36,8 @@ class GroomerTest < Minitest::Test
   end
 
   def test_it_can_count_the_number_of_pets_of_a_certain_type
+    # skip
+
     joel = Customer.new("Joel", 2)
     samson = Pet.new({name: "Samson", type: :dog})
     lucy = Pet.new({name: "Lucy", type: :cat})
@@ -45,6 +53,8 @@ class GroomerTest < Minitest::Test
   end
 
   def test_it_can_list_customers_with_outstanding_balances
+    # skip
+
     joel = Customer.new("Joel", 2)
     joel.charge(10)
     billy = Customer.new("Billy", 3)

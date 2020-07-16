@@ -11,16 +11,22 @@ class DayCareTest < Minitest::Test
   end
 
   def test_it_has_a_name
+    # skip
+
     day_care = DayCare.new("The Dog Spot")
     assert_equal "The Dog Spot", day_care.name
   end
 
   def test_it_starts_with_no_customers
+    # skip
+
     day_care = DayCare.new("The Dog Spot")
     assert_equal [], day_care.customers
   end
 
   def test_it_can_add_customers
+    # skip
+
     day_care = DayCare.new("The Dog Spot")
     joel = Customer.new("Joel", 2)
     billy = Customer.new("Billy", 3)
@@ -30,6 +36,8 @@ class DayCareTest < Minitest::Test
   end
 
   def test_it_can_list_unfed_pets
+    # skip
+
     joel = Customer.new("Joel", 2)
     samson = Pet.new({name: "Samson", type: :dog})
     lucy = Pet.new({name: "Lucy", type: :cat})
@@ -47,6 +55,8 @@ class DayCareTest < Minitest::Test
   end
 
   def test_it_can_find_customer_by_id
+    # skip
+
     joel = Customer.new("Joel", 2)
     joel.charge(10)
     billy = Customer.new("Billy", 3)

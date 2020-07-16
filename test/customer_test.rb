@@ -10,17 +10,22 @@ class CustomerTest < Minitest::Test
   end
 
   def test_it_has_attributes
+    # skip
     joel = Customer.new("Joel", 2)
     assert_equal "Joel", joel.name
     assert_equal 2, joel.id
   end
 
   def test_it_starts_with_no_pets
+    # skip
+
     joel = Customer.new("Joel", 2)
     assert_equal [], joel.pets
   end
 
   def test_it_can_adopt_pets
+    # skip
+
     joel = Customer.new("Joel", 2)
     samson = Pet.new({name: "Samson", type: :dog})
     lucy = Pet.new({name: "Lucy", type: :cat})
@@ -30,11 +35,15 @@ class CustomerTest < Minitest::Test
   end
 
   def test_its_outstanding_balance_starts_at_zero
+    # skip
+
     joel = Customer.new("Joel", 2)
     assert_equal 0, joel.outstanding_balance
   end
 
   def test_it_can_charge_to_increase_outstanding_balance
+    # skip
+
     joel = Customer.new("Joel", 2)
     joel.charge(15)
     joel.charge(7)
